@@ -30,6 +30,6 @@ module.exports = class HelloCommand extends Command {
 	}
 
 	async run(msg, { text }) {
-		msg.say(`Votre texte est: ${text}`);
+		msg.say(`Votre texte est: ${text} ${msg.author}`);
 	}
 };
