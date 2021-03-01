@@ -17,7 +17,7 @@ const client = new CommandoClient({
 
 client.registry
     .registerDefaultTypes()
-    .registerGroups(['divers'])
+    .registerGroups(['divers'])  
     .registerCommandsIn(path.join(__dirname, 'commands'))
 ;
 
