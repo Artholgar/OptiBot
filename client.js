@@ -14,7 +14,6 @@ module.exports = class BotClient extends CommandoClient {
             format: winston.format.printf((log) => `[${new Date().toLocaleString()}] - [${log.level.toUpperCase()}] - ${log.message}`)
         });
 
-        this.on('ready', () => this.logger.log('info', `Je suis prêt !`));
         this.on('debug', m => this.logger.log('debug', m));
         this.on('warn', m => this.logger.log('warn', m));
         this.on('error', m => this.logger.log('error', m));
