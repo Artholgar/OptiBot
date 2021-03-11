@@ -11,6 +11,6 @@ module.exports = {
             .catch(console.error);
         }
 
-        channel.send(`nouvelle emoji ${emoji}`);
+        channel.send("nouvelle emoji " + emoji);
     }
 };

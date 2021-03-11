@@ -1,10 +1,12 @@
 module.exports = {
-    run: (client) => {
-        client.on('message',message => {
-            if(message.content === 'opti') {
-                const reactionEmoji = message.gulid.emojis.cache.find(emoji => emoji.name === 'opti');  
-                message.react(reactionEmoji);
-            }
-        });
+    run: (client, message) => {
+        if (message.content.includes("opti")) {  
+            const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'opti');
+            message.react(reactionEmoji);
+        }
+        if (message.content.includes("pas opti")) {
+            const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'pasopti');
+            message.react(reactionEmoji);
+        }
     }
-}
+};
