@@ -10,7 +10,8 @@ module.exports = {
             .then(console.log)
             .catch(console.error);
         }
-
-        channel.send("nouvelle emoji " + emoji);
+        
+        channel.send(emoji.toString() + "  " + emoji.toString() + " " + emoji.toString());
+        channel.send("\nNouvelle emoji disponible, grace a discord nitro, vous pourez l'utiliser ou vous voulez !!! :scream: ");
     }
 };
