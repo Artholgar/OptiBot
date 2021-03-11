@@ -1,5 +1,6 @@
 module.exports = {
     run: (client, message) => {
+        message.content = message.content.toLowerCase();
         var regexpOpti = /(?<!pas[ ]*)opti/;
         var regexpPasOpti = /(?<=pas[ ]*)opti/;
 
