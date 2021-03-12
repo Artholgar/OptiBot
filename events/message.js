@@ -4,6 +4,10 @@ module.exports = {
         var regexpOpti = /(?<!pas[ ]*)opti/;
         var regexpPasOpti = /(?<=pas[ ]*)opti/;
 
+        if (message.author.bot) {
+            return;
+        }
+
         if (regexpOpti.test(message.content)) {  
             const reactionEmoji = message.guild.emojis.cache.find(emoji => emoji.name === 'opti');
             message.react(reactionEmoji);
