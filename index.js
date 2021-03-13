@@ -10,6 +10,7 @@ for (const k in envConfig) {
 }
 
 const client = new CommandoClient({
+    ws: { intents: ['GUILD_PRESENCES', 'GUILD_MEMBERS'] },
 	commandPrefix: 'fdp!', // Préfixe des commandes (ex: ?help)
 	owner: process.env.BOT_OWNER_ID, // ID de l'owner du bot, peut également être un tableau d'id pour plusieurs owners, ex: ['ID1', 'ID2']
     disableMentions: 'everyone', // Désactive, par sécurité, l'utilisation du everyone par le bot

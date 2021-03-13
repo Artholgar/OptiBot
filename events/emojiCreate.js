@@ -30,8 +30,9 @@ module.exports = {
             .setTimestamp() // Vous pouvez passer un objet Date() en argument
 
             // Fields
+            .addField('Name', emoji.name, true)
             ;
-
-        channel.send(embed)
+        console.log(emoji);
+        //channel.send(embed);
     }
 }
