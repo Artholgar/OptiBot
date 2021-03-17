@@ -9,6 +9,8 @@ for (const k in envConfig) {
     process.env[k] = envConfig[k]
 }
 
+const config = require('./config.json');
+
 const client = new CommandoClient({
     ws: { intents: ['GUILD_PRESENCES', 'GUILD_MEMBERS'] },
 	commandPrefix: 'fdp!', // Préfixe des commandes (ex: ?help)
@@ -48,4 +50,4 @@ client.registry
 
 client.on('error', console.error); // Afficher les erreurs
 
-client.login(process.env.BOT_TOKEN);
+client.login(config.token);
